@@ -1,0 +1,26 @@
+Goal : display a win  with the winner and a draw at the end of a tie game
+
+Process 
+        style win 
+        style draw
+       
+      code the function that display win
+      code the function that display draw 
+     add click events on buttons in order to reset the game 
+     
+     add scripts to quit in order to clear the win or draw screen 
+ -------------------------------------------------------------------------
+   CONQUER THE FUNCTION THAT DISPLAY A WIN
+    
+    function displayWinner()
+       display( blackMask)
+       let winner = checkWinner()
+       winnerAnnounceInnerHTML = 'winner wins '
+       display(winDisplayScreen)
+       
+       
+    function displayDraw()
+       display (blackMask)
+       winnerAnnounce inner HTML = 'DRAW!!!!!!'
+       display(winDisplayScreen )
+       

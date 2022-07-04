@@ -1,0 +1,42 @@
+
+Tic Tac  Toe game steps 
+
+   - create a gameBoard:
+       create an array named gameBoard that contain the game pieces 
+          each piece is made of div and content 
+          
+   - the user chose wethter he plays single or with other player 
+   
+   - the game must display every win (in case of more than 9 pieces )
+      a win occure when a player align three items in a row, a column or in a diagonal 
+   
+   - the game must identify the end of the game 
+   - the game must display the winner 
+   
+   - how to play the game ?
+       case two users 
+       randomly select the first player 
+         a user click on a piece to introduce his choice and the game change the user 
+         
+       case of a user against computer 
+           a user against computer 
+              randomly select the first player 
+              user clic on a piece to introduce his choice and must wait .5 seconds for computer to play.
+          Divide and conquer 
+          
+          
+     1 create the Gamebord and fill it with random plays
+     
+        pseudo Code 
+                   
+                   create an array that contains gameboard pieces 
+                   and display that array pieces on the screen 
+                   
+               how to create the gameboard Array?
+                   create 9 divs with className 'square pieceRank'
+                   give a name to each piece 
+                   gameboard array is a list of that names 
+                        
+  How to play the game : case two users  pseudo code
+  
+        

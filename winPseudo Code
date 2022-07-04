@@ -1,0 +1,96 @@
+    Goals 
+    
+      -- ALLOW GAME TO RECOGNIZE END OF PLAYS   DONE 
+      --               RECOGNIZE A WIN  
+      --               REGOCNIZE THE WINNER 
+      
+  LeT CONQUER THE END OF PLAYS PART  ************* DONE 
+  
+      When the last empty cell is hitted 
+         wait 5ms and display and of the game    
+         
+   
+  Let conquer  recognizing a win 
+  
+     a win occure when :
+           - three os in a raw or a column 
+           - three xs in a raw or a column 
+           - three xs in a diagonal 
+           - three os in a diagonal 
+           
+     raws   
+         123  ------    +1
+         456
+         789
+      columns
+           147 ----------- +3
+           258
+           369
+      diagonals  
+             159      ---------- +4
+             357    ------------  +2
+             
+        Devide and concquer 
+        
+        LOOK AT EACH ROW, COLUMN AND DIAGONAL AFTER EACH PLAY😂️
+        if one of the is ooo  winner  is second player 
+        if one of them is xxx winner is firstPlayer 
+        
+       Concquer identify a win row  and a win column 
+          
+          create a function that take row cells values and  concatenate letters and return a word 
+          apply that function to rows and columns and diagonals in order to identify a win ;
+          
+          
+        Pseudo code of  the function that concate  done 
+        
+   -----------------------------------------------------------------------
+   
+       goal : a function to look at each row, column and diagonal   DONE 
+       
+   pseudo code :
+           create three arrays rowsStart columnStart and diagSatart 
+           
+         columnStart  contain 0,1,2
+         rowsStart contain 0, 3, 6
+         diagStart contains 0, 2  
+      loop through these arrays and collect their plays and store them in new arrays (3 arrays row plays, column plays and diagPlays )  DONE 
+      
+---------------------------------------------------------------------------
+           GOAL:  identify a win and target wining  cells 
+           
+    
+                   
+            write a function that look at plays (checkWin()) and identify a win  and return true if there is a win and false if not.   DONE
+            
+            write a function (checkWinDirection())that identify  the winning cells location if there is a win and return the column row or diag   DONE 
+            
+           write a function (checkWinner()) that identify the winner when a win occure.     Done 
+           
+ -------------------------------------------------------------------
+   Goal:  target winning cells 
+   
+   write a function (getWinningCells())  that return winning cells indexs when a win occure
+   
+   write a function (checkWinnigPlay()) that return the winning play   DONE
+   
+    Pseudo Code of getWinnigCells  :
+       if a win occure 
+          get winning play and checkWinDirection 
+          look at the index of the winning play in winDirection 
+          
+   
+ 
+           
+             
+      
+      
+      
+      
+      
+  
+      
+       
+         
+         
+    
