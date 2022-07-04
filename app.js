@@ -94,6 +94,21 @@
            winnersDisplayScreen.innerHTML = text;
        }
 
+       function markCells(arr) {
+           gameBoard[arr[0]].className = 'square win-cell';
+           gameBoard[arr[1]].className = 'square win-cell';
+           gameBoard[arr[2]].className = 'square win-cell';
+       }
+
+       function removeMark(arr) {
+           const indexOne = arr[0];
+           const indexTwo = arr[1];
+           const indexThree = arr[2];
+           gameBoard[indexOne].className = `square ${squaresArray[indexOne]}`;
+           gameBoard[indexTwo].className = `square ${squaresArray[indexTwo]}`;
+           gameBoard[indexThree].className = `square ${squaresArray[indexThree]}`;
+       }
+
        function cleargameBoard() {
            gameBoard.forEach((element) => {
                element.style.display = 'none'
@@ -136,10 +151,10 @@
            });
            oneOkButton.addEventListener('click', () => {
                closeForm(oneUserForm);
-               resetgameBoard();
+               // resetgameBoard();
                clearPlays();
                displayForm(quitButton);
-               // alert(playerName.value);
+
                putInScreen('Play Game');
            });
            twoOkButton.addEventListener('click', () => {
@@ -169,16 +184,19 @@
                putInScreen('Select players');
                closeForm(blackMask);
                closeForm(winDislplayScreen);
+               removeMark(checkWiningPlayIndexs());
                numberOfEmptyCells = 9;
 
            })
            buttonPlayAgain.addEventListener('click', () => {
                resetgameBoard();
+               removeMark(checkWiningPlayIndexs());
                closeForm(quitButton);
                clearPlays();
                closeForm(blackMask);
                closeForm(winDislplayScreen);
                displayForm(quitButton);
+
                numberOfEmptyCells = 9;
 
            })
@@ -361,7 +379,7 @@
                            cellsIndex = [6, 7, 8];
                        }
                    } else {
-                       playIndex = getPlays().diagPlays.indexOf('OOO');
+                       playIndex = getPlays().rowPlays.indexOf('OOO');
                        if (playIndex == 0) {
                            cellsIndex = [0, 1, 2];
                        } else if (playIndex == 1) {
@@ -382,7 +400,7 @@
                            cellsIndex = [2, 5, 8];
                        }
                    } else {
-                       playIndex = getPlays().diagPlays.indexOf('OOO');
+                       playIndex = getPlays().columnPlays.indexOf('OOO');
                        if (playIndex == 0) {
                            cellsIndex = [0, 3, 6];
                        } else if (playIndex == 1) {
@@ -444,10 +462,14 @@
                        checkEnd();
                        checkWin();
 
+                       function showMark() {
+                           markCells(checkWiningPlayIndexs());
+                       }
+
                        function myalert() {
                            if (checkWin()) {
-
-                               setTimeout(displayWinner, 100);
+                               setTimeout(showMark, 15);
+                               setTimeout(displayWinner, 200);
                            }
                        }
                        myalert();

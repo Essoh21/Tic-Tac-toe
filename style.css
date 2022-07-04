@@ -205,3 +205,35 @@
         .play-again:hover {
             opacity: .83;
         }
+        
+        .win-cell {
+            border: 3px solid var(--body-back-ground-color);
+            background-color: var(--squares-background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            line-height: 80%;
+            font-size: 7rem;
+            border-radius: .2rem;
+            animation: 1s infinite alternate winCell;
+        }
+        
+        @keyframes winCell {
+            from {
+                font-size: 7rem;
+            }
+            to {
+                font-size: 9rem;
+            }
+        }
+        
+        .copyright {
+            color: var(--input-backgroud-color);
+            margin-top: 4rem;
+        }
+        
+        .copyright a {
+            text-decoration: none;
+            color: #93bee9;
+        }
