@@ -16,7 +16,7 @@
        let playerTwo = document.querySelector('#player-two');
        const blackMask = document.querySelector('.black-mask');
        const winDislplayScreen = document.querySelector('.win-display-screen');
-       //  let actualPlayer = 1;
+
        let playerMark;
        let numberOfEmptyCells = 9
 
@@ -77,7 +77,7 @@
                setTimeout(alertSound, 20);
                numberOfEmptyCells = 9;
 
-               // cleargameBoard();
+
 
            }
 
@@ -151,11 +151,11 @@
            });
            oneOkButton.addEventListener('click', () => {
                closeForm(oneUserForm);
-               // resetgameBoard();
+
                clearPlays();
                displayForm(quitButton);
 
-               putInScreen('Play Game');
+               putInScreen('Sorry in progress');
            });
            twoOkButton.addEventListener('click', () => {
                closeForm(twoUsersForm);
@@ -190,7 +190,9 @@
            })
            buttonPlayAgain.addEventListener('click', () => {
                resetgameBoard();
-               removeMark(checkWiningPlayIndexs());
+               if (checkWin()) {
+                   removeMark(checkWiningPlayIndexs());
+               }
                closeForm(quitButton);
                clearPlays();
                closeForm(blackMask);
@@ -236,12 +238,12 @@
        function getPlays() {
            const rowStart = [0, 3, 6];
            const columnStart = [0, 1, 2];
-           //  const diagStart = [0, 2];
+
            let rowPlays = [];
            let columnPlays = [];
            let diagPlays = [];
            const gameBoardContents = [];
-           gameBoard.forEach((element) => { //
+           gameBoard.forEach((element) => {
                gameBoardContents.push(element.innerHTML);
            })
            rowStart.forEach((element) => {
@@ -493,20 +495,7 @@
    const Player = (name) => {
        return { name };
    };
-   const Gamehandler = (() => {
 
-
-
-
-       return {
-           //  joinStrings,
-           //  getPlays
-           // rowPlays,
-           //  columnPlays,
-           // diagPlays
-       }
-
-   })();
    Gameboard.createGameBoard();
 
    Gameboard.displayControler();
