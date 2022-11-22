@@ -5,6 +5,7 @@
             --body-back-ground-color: #646566;
             --squares-background-color: #7a7166;
             --input-backgroud-color: #cbd5e1;
+               user-select: false;
         }
         
         body {
